@@ -6,7 +6,8 @@ from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
     # 動詞原則一：動詞與環綴連寫
     ('會記得', 'ē-kì-tit', None),
     ('會記得', 'ē kì-tit', [('E動詞（一）', 1, 'ē kì-tit')]),
-    ('媠姑娘會記得你', 'Suí koo-niû ē-kì tit lí', [('E動詞（一）', 3, 'ē kì-tit')]),
+    ('會記得', 'ē-kì tit', None),
+    ('媠姑娘會記得你', 'Suí koo-niû ē-kì tit lí', [('E動詞（一）', 3, 'Suí koo-niû ē kì-tit lí')]),
     ('袂曉得', 'bē-hiáu--tit', None),
     ('袂曉得', 'bē hiáu--tit', [('E動詞（一）', 1, 'bē-hiáu--tit')]),
     # 動詞原則二：動詞和後接的時貌標誌連寫
@@ -20,6 +21,11 @@ from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
     ('徛咧講', 'Khiā-leh-kóng', [('E動詞（二）b', 1, 'Khiā-leh kóng')]),
     ('徛咧講', 'Khiā--leh kóng', [('E動詞（二）b', 1, 'Khiā-leh kóng')]),
     ('徛咧講', 'Khiā --leh kóng', [('E輕聲符', 1, 'Khiā-leh kóng')]),
+    ('來過遮', 'Lâi-kuè tsia', None),
+    ('來過矣', 'lâi--kuè--ah', None),
+    ('捌來過。', 'bat lâi--kuè.', None),
+    ('飛過來', 'pue--kè-lâi', None),
+    ('飛過來遮', 'Pue kuè-lâi tsia', None),
     ('看過三本冊', 'Khuànn--kuè sann pún tsheh',
      [('E動詞（二）b', 1, 'Khuànn-kuè sann')]),
     # 原則三
