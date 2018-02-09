@@ -34,6 +34,11 @@ class 單元試驗(TestCase):
         self.漢字 = '頭家佇頭前'
         self.臺羅 = 'Thâu-ke-tī-thâu-tsîng'
         self.預期 = [('E虛詞（一）', 3, '前', 'Thâu-ke tī'), ('E虛詞（一）', 3, '後', 'tī thâu-tsîng')]
+    
+    def test_虛詞原則一_佇_數字調_正確(self):
+        self.漢字 = '伊佇頭前'
+        self.臺羅 = 'I1 ti7 thau5-tsing5'
+        self.預期 = None
         
     def test_虛詞原則一_予_正確(self):
         self.漢字 = '講予你知'
