@@ -47,12 +47,22 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Jú lâi-jú kuai'
         self.預期 = [('E虛詞（二）', 3, '前', 'lâi jú')]
 
-    def test_連詞_愈愈_不夾別詞(self):
+    def test_連詞_愈愈_不夾詞(self):
         self.漢字 = '愈來愈乖'
         self.臺羅 = 'Jú-lâi-jú kuai'
         self.預期 = [('E虛詞（二）', 1, '後', 'Jú lâi'), ('E虛詞（二）', 3, '前', 'lâi jú')]
+    
+    def test_連詞_愈愈_不夾詞_長詞(self):
+        self.漢字 = '愈大漢愈乖'
+        self.臺羅 = 'Jú-tuā-hàn-jú kuai'
+        self.預期 = [('E虛詞（二）', 1, '後', 'Jú tuā-hàn'), ('E虛詞（二）', 3, '前', 'tuā-hàn jú')]
 
     def test_連詞_愈愈_不當詞嵌(self):
         self.漢字 = '愈來愈乖'
         self.臺羅 = 'Jú lâi-jú-kuai'
         self.預期 = [('E虛詞（二）', 3, '前', 'lâi jú'), ('E虛詞（二）', 3, '後', 'jú kuai')]
+    
+    def test_連詞_愈愈_不當詞嵌_長詞(self):
+        self.漢字 = '愈來愈大漢'
+        self.臺羅 = 'Jú lâi-jú-tuā-hàn'
+        self.預期 = [('E虛詞（二）', 3, '前', 'lâi jú'), ('E虛詞（二）', 3, '後', 'jú tuā-hàn')]
