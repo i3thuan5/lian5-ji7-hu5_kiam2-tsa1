@@ -30,3 +30,9 @@ class 單元試驗(TestCase):
         self.漢字 = '朋友的物件'
         self.臺羅 = 'pîng-iú-ê-mi̍h-kiānn'
         self.預期 = [('E虛詞（三）', 3, '前'), ('E虛詞（三）', 3, '後')]
+    
+    def test_的_是詞綴_不是結構助詞(self):
+        self.漢字 = '老的'
+        self.臺羅 = 'lāu--ê'
+        self.預期 = []
+    
