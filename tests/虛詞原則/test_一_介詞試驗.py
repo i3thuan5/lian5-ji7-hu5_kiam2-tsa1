@@ -1,12 +1,12 @@
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from unittest.case import TestCase
-from src.連字符檢查.虛詞原則.虛詞 import 是否符合原則
+from src.連字符檢查.虛詞原則.虛詞 import 是否符合介詞原則
 
 
 class 單元試驗(TestCase):
     def tearDown(self):
         句物件 = 拆文分析器.對齊句物件(self.漢字, self.臺羅)
-        self.assertEqual(是否符合原則(句物件), self.預期)
+        self.assertEqual(是否符合介詞原則(句物件), self.預期)
     
     # 虛詞原則一：介詞與前後詞分寫
     def test_虛詞原則一_佇_正確(self):
