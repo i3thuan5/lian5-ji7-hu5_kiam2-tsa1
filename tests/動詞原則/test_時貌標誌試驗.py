@@ -76,3 +76,9 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Guá khuànn-tio̍h--ê'
         # 正確 Guá khuànn--tio̍h--ê
         self.預期 = [('E動詞（二）', 3, '前')]
+    
+    def test_我看著的_錯誤_要和結構助詞分寫(self):
+        self.漢字 = '我看著的'
+        self.臺羅 = 'Guá khuànn-tio̍h-ê'
+        # 正確 Guá khuànn--tio̍h--ê
+        self.預期 = [('E動詞（二）', 3, '後')]
