@@ -1,6 +1,5 @@
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from src.連字符檢查.虛詞原則.虛詞 import 是否符合嘆詞原則
-from unittest.case import TestCase, skip
+from unittest.case import TestCase
 
 
 class 單元試驗(TestCase):
