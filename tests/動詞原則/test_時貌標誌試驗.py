@@ -1,5 +1,5 @@
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from unittest.case import TestCase
+from unittest.case import TestCase, skip
 
 
 class 單元試驗(TestCase):
@@ -9,12 +9,15 @@ class 單元試驗(TestCase):
 
     # 動詞原則二：動詞和後接時貌標誌連寫
     # 咧、著、過
+    # 徛-咧 講
+    # 咧 看 冊  (動詞前面的時貌標誌分寫）
 
     def test_徛咧講_正確(self):
         self.漢字 = '徛咧講'
         self.臺羅 = 'Khiā-leh kóng'
         self.預期 = []
 
+    #@skip('必須知道前面是動詞（徛-咧講）還是名詞（我咧等）')
     def test_徛咧講_錯誤_前面必須連寫(self):
         self.漢字 = '徛咧講'
         self.臺羅 = 'Khiā leh kóng'
@@ -25,6 +28,7 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Khiā-leh-kóng'
         self.預期 = [('E動詞（二）', 2, '後')]
 
+    #@skip('必須知道前面是動詞（徛-咧講）還是名詞（我咧等）')
     def test_徛咧講_錯誤_前連寫後分寫(self):
         self.漢字 = '徛咧講'
         self.臺羅 = 'Khiā leh-kóng'
@@ -33,6 +37,11 @@ class 單元試驗(TestCase):
     def test_徛咧講_錯誤_後面有詞就不用輕聲調(self):
         self.漢字 = '徛咧講'
         self.臺羅 = 'Khiā--leh kóng'
+        self.預期 = [('E動詞（二）', 2, '前')]
+    
+    def test_我咧講_錯誤_前面不是動詞(self):
+        self.漢字 = '我咧講'
+        self.臺羅 = 'Guá-leh kóng'
         self.預期 = [('E動詞（二）', 2, '前')]
 
     def test_看過書_錯誤_不用輕聲調且後面分寫(self):
