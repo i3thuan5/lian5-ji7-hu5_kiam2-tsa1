@@ -20,15 +20,20 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Khiā-leh kóng'
         self.預期 = []
     
+    def test_徛咧講_錯誤_前面動詞連寫(self):
+        self.漢字 = '徛咧講'
+        self.臺羅 = 'Khiā leh kóng'
+        self.預期 = [('E動詞（二）', 2, '前')]
+
     def test_徛咧講_錯誤_後分寫(self):
         self.漢字 = '徛咧講'
         self.臺羅 = 'Khiā-leh-kóng'
         self.預期 = [('E動詞（二）', 2, '後')]
     
-    def test_徛咧講_錯誤_前面動詞連寫後分寫(self):
-        self.漢字 = '徛咧講'
-        self.臺羅 = 'Khiā leh-kóng'
-        self.預期 = [('E動詞（二）', 2, '前'), ('E動詞（二）', 2, '後')]
+#     def test_徛咧講_錯誤_前面動詞連寫後分寫(self):
+#         self.漢字 = '徛咧講'
+#         self.臺羅 = 'Khiā leh-kóng'
+#         self.預期 = [('E動詞（二）', 2, '前'), ('E動詞（二）', 2, '後')]
 
     def test_徛咧講_錯誤_後面有詞就不用輕聲調(self):
         self.漢字 = '徛咧講'
@@ -41,6 +46,7 @@ class 單元試驗(TestCase):
         self.預期 = [('E動詞（二）', 2, '前')]
     
     def test_坐佇咧遮_正確(self):
+        # 咧已經跟佇連寫了，前一個動詞坐不需要再連寫
         self.漢字 = '坐佇咧遮'
         self.臺羅 = 'Tsē tī-leh tsia'
         self.預期 = []
