@@ -37,3 +37,8 @@ class 單元試驗(TestCase):
         self.臺羅 = 'lāu--ê'
         self.預期 = []
     
+    @skip('拆文分析器這馬閣有bug')
+    def test_的_前面時貌標誌且句子結尾(self):
+        self.漢字 = '我看著的'
+        self.臺羅 = 'Guá khuànn--tio̍h--ê'
+        self.預期 = []
