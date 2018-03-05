@@ -6,15 +6,20 @@ from src.連字符檢查.動詞原則.動詞 import 是否符合著原則
 class 單元試驗(TestCase):
     def tearDown(self):
         句物件 = 拆文分析器.對齊句物件(self.漢字, self.臺羅)
-        self.assertEqual(是否符合著原則(句物件), self.預期)
+        self.assertEqual(是否符合著原則(句物件), self.預期,
+                         (self.漢字, self.臺羅))
 
     # 動詞原則二：動詞和後接時貌標誌連寫
-    
-    # 著是時貌，和前面動詞連寫 我看著 => 我看-著
-    # 著是時貌，和後面分寫，跳過不處理。因為分不出是「著病」還是「著病人」
+    #
+    # 目前只處理該連寫：
+    # 著是時貌，應和前面動詞連寫。 我看著 => 我看-著
+    #
+    # 若已經連寫的但該分寫的，跳過：
+    # 著是時貌，應和後面分寫，跳過不處理。 我看著-病 因為分不出是「著病」還是「著病人」
     # 著是動詞，跳過不處理 著你
     # 著是動詞一部份，跳過不處理 我著-病
-    
+    # 著和前面是其他詞性的詞組，跳過不處理 我毋著 => 我毋-著
+
     def test_我看著錢_正確(self):
         self.漢字 = '我看著錢'
         self.臺羅 = 'Guá khuànn-tio̍h tsînn'
@@ -29,8 +34,8 @@ class 單元試驗(TestCase):
         self.漢字 = '我看著錢'
         self.臺羅 = 'Guá khuànn--tio̍h tsînn'
         self.預期 = [('E動詞（二）', 3, '前'), ]
-    
-    @skip('沒辦法辨別著是否為動詞，分不出是「著病」還是「著病人」')
+
+    @skip('沒辦法辨別著和後面是否為詞組')
     def test_我看著錢_錯誤_後面分寫(self):
         self.漢字 = '我看著錢'
         self.臺羅 = 'Guá khuànn-tio̍h-tsînn'
@@ -52,8 +57,8 @@ class 單元試驗(TestCase):
         self.預期 = []
 
     def test_我有看著_正確(self):
-        self.漢字 = '我有看著'
-        self.臺羅 = 'Guá ū khuànn--tio̍h'
+        self.漢字 = '我有看著。'
+        self.臺羅 = 'Guá ū khuànn--tio̍h.'
         self.預期 = []
 
     def test_我有看著_錯誤_結尾應輕聲調(self):
@@ -61,10 +66,14 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Guá ū khuànn-tio̍h.'
         self.預期 = [('E動詞（二）', 3, '前'), ]
 
-    @skip('沒辦法辨別著是否為動詞，著-病，看-著 病-人')
+    @skip('沒辦法辨別著和後面是否為詞組')
     def test_著是動詞_我著病(self):
         self.漢字 = '我著病。'
         self.臺羅 = 'Guá tio̍h-pīnn.'
         self.預期 = []
-    
-    
+
+    @skip('沒辦法辨別著和前半段是否為同一詞組，暫時就當作合法')
+    def test_毋著_和前面是其他詞性的詞組(self):
+        self.漢字 = '我毋著。'
+        self.臺羅 = 'Guá m̄-tio̍h.'
+        self.預期 = []
