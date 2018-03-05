@@ -84,3 +84,8 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Beh khiā-leh--bô?'
         # 正確 'Khiā--leh'
         self.預期 = [('E動詞（二）', 3, '前')]
+        
+    def test_咧欲_正確(self):
+        self.漢字 = '咧欲'
+        self.臺羅 = 'teh-beh'
+        self.預期 = []
