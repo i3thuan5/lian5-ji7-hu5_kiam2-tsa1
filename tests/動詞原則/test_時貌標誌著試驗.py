@@ -70,13 +70,13 @@ class 單元試驗(TestCase):
         self.預期 = [('E動詞（二）', 3, '前'), ]
 
     @skip('沒辦法辨別著和後面是否為詞組')
-    def test_著是動詞_我著病(self):
+    def test_著開頭詞組_正確(self):
         self.漢字 = '我著病。'
         self.臺羅 = 'Guá tio̍h-pīnn.'
         self.預期 = []
 
     @skip('沒辦法辨別著和前半段是否為同一詞組，暫時就當作合法')
-    def test_毋著_和前面是其他詞性的詞組(self):
+    def test_著結尾詞組_正確(self):
         self.漢字 = '我毋著。'
         self.臺羅 = 'Guá m̄-tio̍h.'
         self.預期 = []
