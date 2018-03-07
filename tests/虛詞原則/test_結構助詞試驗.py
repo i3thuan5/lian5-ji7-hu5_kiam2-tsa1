@@ -32,7 +32,7 @@ class 單元試驗(TestCase):
         self.預期 = [('E虛詞（三）', 3, '前'), ('E虛詞（三）', 3, '後')]
     
     @skip('拆文分析器這馬閣有bug')
-    def test_的_是詞綴_不是結構助詞(self):
+    def test_老的_是詞綴_不是結構助詞(self):
         self.漢字 = '老的'
         self.臺羅 = 'lāu--ê'
         self.預期 = []
