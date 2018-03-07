@@ -27,17 +27,17 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Guá-suah'
         self.預期 = [('E動詞（三）', 2, '前')]
         
-    def test_整理好_要分寫(self):
+    def test_整理好_多音節動詞和單音節補語_要分寫(self):
         self.漢字 = '整理好'
         self.臺羅 = 'Tsíng-lí-hó'
         self.預期 = [('E動詞（三）', 3, '前')]
 
-    def test_排好勢_要分寫(self):
+    def test_排好勢_單音節動詞和多音節補語_要分寫(self):
         self.漢字 = '排好勢'
         self.臺羅 = 'Pâi-hó-sè'
         self.預期 = [('E動詞（三）', 2, '前')]
 
-    def test_整理好勢_要分寫(self):
+    def test_整理好勢_多音節動詞和多音節補語_要分寫(self):
         self.漢字 = '整理好勢'
         self.臺羅 = 'Tsíng-lí-hó-sè'
         self.預期 = [('E動詞（三）', 3, '前')]
