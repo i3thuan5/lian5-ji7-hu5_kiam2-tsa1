@@ -24,9 +24,14 @@ class 單元試驗(TestCase):
     def test_會記得_錯誤_尾字應連寫(self):
         self.漢字 = '姑娘會記得你'
         self.臺羅 = 'Koo-niû ē-kì tit lí'
-        self.預期 = [('E動詞（一）', 4, '前')]
+        self.預期 = [('E動詞（一）', 5, '前')]
     
     def test_袂記得_正確(self):
         self.漢字 = '我袂記得你'
         self.臺羅 = 'Guá bē-kì--tit lí'
+        self.預期 = []
+
+    def test_才會得人疼_正確(self):
+        self.漢字 = '才會得人疼'
+        self.臺羅 = 'Tsiah-ē tit-lâng-thiànn'
         self.預期 = []
