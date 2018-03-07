@@ -1,5 +1,5 @@
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from unittest.case import TestCase
+from unittest.case import TestCase, skip
 from src.連字符檢查.動詞原則.動詞 import 符合單音節補語原則
 
 
@@ -22,7 +22,8 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Guá kóng suah'
         self.預期 = [('E動詞（三）', 3, '前')]
     
-    def test_我煞_前面不是動詞(self):
+    @skip('暫時免處理，無知影閣有捌種情形無')
+    def test_我煞_前面不是動詞_要分寫(self):
         self.漢字 = '我煞'
         self.臺羅 = 'Guá-suah'
         self.預期 = [('E動詞（三）', 2, '前')]
