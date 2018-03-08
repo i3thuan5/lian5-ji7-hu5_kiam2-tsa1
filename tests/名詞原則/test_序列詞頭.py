@@ -19,9 +19,9 @@ class 單元試驗(TestCase):
     def test_初一_應和後面數詞連寫(self):
         self.漢字 = '恁初一去佗位'
         self.臺羅 = 'Lín tshe it khì tó-uī'
-        self.預期 = [('E名詞（一）', 3, '前')]
+        self.預期 = [('E名詞（二）', 3, '前')]
 
-    def test_第一_應和後面數詞連寫(self):  
-        self.漢字 = '恁第一工去佗位'
-        self.臺羅 = 'Lín tshe it kang uī khì tó-uī'
-        self.預期 = [('E名詞（一）', 3, '前')] 
+    def test_第十_應和後面數詞連寫(self):  
+        self.漢字 = '恁第十工去佗位'
+        self.臺羅 = 'Lín tē tsa̍p kang khì tó-uī'
+        self.預期 = [('E名詞（二）', 3, '前')] 
