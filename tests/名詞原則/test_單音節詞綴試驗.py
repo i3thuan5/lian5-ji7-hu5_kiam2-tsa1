@@ -20,7 +20,7 @@ class 單元試驗(TestCase):
     def test_阿公_名詞和前詞綴應連寫(self):
         self.漢字 = '恁阿公'
         self.臺羅 = 'Lín a kong'
-        self.預期 = [('E名詞（一）', 2, '後')]
+        self.預期 = [('E名詞（一）', 3, '前')]
     
     def test_椅仔_正確(self):
         self.漢字 = '椅仔'
