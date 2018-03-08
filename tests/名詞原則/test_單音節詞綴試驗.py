@@ -1,4 +1,4 @@
-from unittest.case import TestCase
+from unittest.case import TestCase, skip
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from src.連字符檢查.名詞原則.名詞與單音節詞綴 import 單音節詞綴原則
 
@@ -32,6 +32,7 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Í á'
         self.預期 = [('E名詞（一）', 2, '前')] 
     
+    @skip('拆文分析器還分不出輕聲調')
     def test_林的_輕聲調的視為後詞綴(self):
         self.漢字 = '林的是啥人'
         self.臺羅 = 'Lîm--ê sī siánn-lâng'
