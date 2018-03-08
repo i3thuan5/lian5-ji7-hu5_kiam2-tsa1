@@ -1,11 +1,12 @@
 from unittest.case import TestCase
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
+from src.連字符檢查.名詞原則.名詞與單音節詞綴 import 單音節詞綴原則
 
 
 class 單元試驗(TestCase):
     def tearDown(self):
         句物件 = 拆文分析器.對齊句物件(self.漢字, self.臺羅)
-        self.assertEqual(符合單音節詞綴原則(句物件), self.預期,
+        self.assertEqual(單音節詞綴原則(句物件), self.預期,
                          (self.漢字, self.臺羅))
     # 名詞原則一：名詞與單音節的前中後詞綴連寫
     # 名詞原則五：阿與後接人名連寫。
