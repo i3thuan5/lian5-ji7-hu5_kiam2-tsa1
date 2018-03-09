@@ -3,7 +3,7 @@ from 臺灣言語工具.基本物件.詞 import 詞
 
 
 def 是序列詞頭(詞分詞):
-    集合 = ('初｜tshe1', '初｜tshue1', '第｜te7',)
+    集合 = ('初｜tshe1', '初｜tshue1', '第｜te7', '頭｜thau5', '後｜au7', '頂｜ting2')
     return 詞分詞 in 集合
 
 
