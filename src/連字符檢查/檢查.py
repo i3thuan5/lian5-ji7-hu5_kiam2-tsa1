@@ -24,7 +24,7 @@ class 連字符檢查物件:
                虛詞.是否符合嘆詞原則,
                虛詞.是否符合語尾助詞原則,
                ]
+        結果 = []
         for 一函式 in 函式串:
-            結果 = 一函式(self.句物件)
-        sorted(結果)
-        return 結果
+            結果 += 一函式(self.句物件)
+        return sorted(結果, key = lambda x : x[1])

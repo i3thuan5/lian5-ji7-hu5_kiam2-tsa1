@@ -5,9 +5,21 @@ from unittest import mock
 from unittest.mock import patch
 
 
-class mock試驗(TestCase):
+class 整合試驗(TestCase):
     def setUp(self):
-        self.一物件 = 連字符檢查物件('漢字', 'Hàn-jī')
+        self.一物件 = 連字符檢查物件(
+            '阿公會記得初一買我的物件',
+            'A kong ē kì-tit tshe it bé guá-ê mi̍h-kiānn'
+        )
+
+    def test檢查一句(self):
+        結果 = self.一物件.檢查()
+        self.assertEqual(結果, [
+            ('E名詞（一）', 2, '前', ),
+            ('E動詞（一）', 3, '後', ),
+            ('E名詞（二）', 7, '前', ),
+            ('E虛詞（三）', 10, '前'),
+        ])
 
     # 名詞原則
 
