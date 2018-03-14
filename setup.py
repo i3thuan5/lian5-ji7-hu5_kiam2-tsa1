@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
   name = 'lian5-ji7-hu5_kiam2-tsa1',
-  version = '0.1',
+  version = '0.2',
   packages = find_packages(exclude=["test*", "tests"]),
   install_requires=['tai5-uan5_gian5-gi2_kang1-ku7'],
 
