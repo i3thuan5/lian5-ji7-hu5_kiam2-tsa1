@@ -1,7 +1,5 @@
-from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from unittest.case import TestCase
 from src.連字符檢查.檢查 import 連字符檢查物件
-from unittest import mock
 from unittest.mock import patch
 
 
