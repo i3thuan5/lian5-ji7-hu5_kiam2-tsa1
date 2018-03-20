@@ -35,7 +35,17 @@ class 單元試驗(TestCase):
         self.漢字 = '我袂記得你'
         self.臺羅 = 'Guá bē-kì--tit lí'
         self.預期 = []
-
+    
+    def test_會袂記得_正確(self):
+        self.漢字 = '便當你哪會袂記得！'
+        self.臺羅 = 'Piān-tong lí ná ē buē-kì-tit!'
+        self.預期 = []
+    
+    def test_袂記得得_正確(self):
+        self.漢字 = '袂記得有得家產'
+        self.臺羅 = 'Bē-kì-tit ū tit ka-sán'
+        self.預期 = []
+    
     def test_才會得人疼_正確(self):
         self.漢字 = '才會得人疼'
         self.臺羅 = 'Tsiah-ē tit-lâng-thiànn'
