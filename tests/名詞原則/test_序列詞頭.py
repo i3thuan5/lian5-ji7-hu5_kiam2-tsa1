@@ -25,3 +25,8 @@ class 單元試驗(TestCase):
         self.漢字 = '恁第十工去佗位'
         self.臺羅 = 'Lín tē tsa̍p kang khì tó-uī'
         self.預期 = [('E名詞（二）', 3, '前')] 
+    
+    def test_頭一擺_正確_不是序列詞(self):  
+        self.漢字 = '恁頭一擺去佗位'
+        self.臺羅 = 'Lín thâu tsi̍t pái khì tó-uī'
+        self.預期 = [] 
