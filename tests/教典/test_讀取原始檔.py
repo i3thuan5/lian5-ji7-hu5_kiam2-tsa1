@@ -11,7 +11,7 @@ class 單元試驗(TestCase):
         self.教典 = 讀取原始檔()
 
     def test_原本的詞轉成詞分詞(self):
-        self.assertEqual('佮-意｜kah4-i3' in self.教典, True)
+        self.assertIn('佮-意｜kah4-i3', self.教典)
 
     def test_有輸出字分詞陣列(self):
         self.assertEqual(
