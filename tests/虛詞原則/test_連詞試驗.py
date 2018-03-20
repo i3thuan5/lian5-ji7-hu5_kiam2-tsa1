@@ -49,7 +49,12 @@ class 單元試驗(TestCase):
         self.預期 = [
             ('E虛詞（二）', 2, '前'),
             ('E虛詞（二）', 2, '後'), ]
-
+    
+    def test_佮意_例外_是教典詞組(self):
+        self.漢字 = '我佮意伊'
+        self.臺羅 = 'Guá kah-ì i'
+        self.預期 = []
+        
     def test_連詞_第一個愈_後面不連寫(self):
         self.漢字 = '愈來愈乖'
         self.臺羅 = 'Jú-lâi jú kuai'
