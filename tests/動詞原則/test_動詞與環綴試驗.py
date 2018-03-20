@@ -16,7 +16,12 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Guá ē-kì-tit lí'
         self.預期 = []
     
-    def test_會記得_錯誤_首字應連寫(self):
+    def test_會記得_錯誤_都要連寫(self):
+        self.漢字 = '姑娘會記得坐高雄捷運去遐行一逝，'
+        self.臺羅 = 'Koo-niû ē kì tit tsē Ko-hiông tsia̍t-ūn khì hia kiânn tsi̍t tsuā,'
+        self.預期 = [('E動詞（一）', 3, '後'), ('E動詞（一）', 5, '前')]
+
+    def test_會記得_錯誤_首字應連寫2(self):
         self.漢字 = '姑娘會記得你'
         self.臺羅 = 'Koo-niû ē kì-tit lí'
         self.預期 = [('E動詞（一）', 3, '後')]
