@@ -48,3 +48,8 @@ class 單元試驗(TestCase):
         self.漢字 = '講予你知'
         self.臺羅 = 'kóng hōo-lí tsai'
         self.預期 = [('E虛詞（一）', 2, '後')]
+
+    def test_例外_西向(self):
+        self.漢字 = '彼當時是東西向主要的公路。'
+        self.臺羅 = 'Hit-tong-sî sī tang-sai-hiòng tsú-iàu ê kong-lōo.'
+        self.預期 = []

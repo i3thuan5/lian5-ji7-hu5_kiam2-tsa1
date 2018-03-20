@@ -4,3 +4,6 @@
 *__pycache__
 .pytest_cache
 *.pyc
+*.tar.gz
+*.egg-info
+/moedict-twblg.json
