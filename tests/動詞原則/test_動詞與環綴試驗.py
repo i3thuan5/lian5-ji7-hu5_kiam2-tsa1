@@ -46,6 +46,11 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Bē-kì-tit ū tit ka-sán'
         self.預期 = []
     
+    def test_袂記得得_錯誤(self):
+        self.漢字 = '袂記得有得家產'
+        self.臺羅 = 'Bē-kì tit ū tit ka-sán'
+        self.預期 = [('E動詞（一）', 3, '前')]
+        
     def test_才會得人疼_正確(self):
         self.漢字 = '才會得人疼'
         self.臺羅 = 'Tsiah-ē tit-lâng-thiànn'
