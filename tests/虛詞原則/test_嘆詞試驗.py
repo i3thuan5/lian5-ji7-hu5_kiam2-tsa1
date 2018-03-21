@@ -21,7 +21,6 @@ class 單元試驗(TestCase):
         self.臺羅 = 'Ooh Sī lí'
         self.預期 = []
     
-    @skip('拆文分析器這馬閣有bug')
     def test_嘆詞_喔_正確_詞尾(self):
         self.漢字 = '是你喔'
         self.臺羅 = 'Sī lí--ooh'
