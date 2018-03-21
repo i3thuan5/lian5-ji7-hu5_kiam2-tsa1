@@ -1,16 +1,18 @@
-from os.path import join, dirname, isfile
+from os.path import join, dirname, isfile, realpath
 import ast
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from 臺灣言語工具.音標系統.閩南語.臺灣閩南語羅馬字拼音 import 臺灣閩南語羅馬字拼音
 import json
 
 def 讀取原始檔():
-    教典json檔名 = join(dirname(dirname(dirname(dirname(__file__)))), 'moedict-twblg.json')
+    目前所在資料夾 = dirname(realpath(__file__))
+    專案資料夾 = dirname(dirname(dirname(目前所在資料夾)))
+    教典json檔名 = join(專案資料夾, 'moedict-twblg.json')
     if isfile(教典json檔名):
         with open(教典json檔名) as f:
             教典表 = set(json.load(f))
     else:
-        教典原始檔名 = join(dirname(dirname(dirname(dirname(__file__)))), 'moedict-twblg-kiat4-ko2')
+        教典原始檔名 = join(專案資料夾, 'moedict-twblg-kiat4-ko2')
         教典表 = set()
         with open(教典原始檔名) as f:
             for line in f:
