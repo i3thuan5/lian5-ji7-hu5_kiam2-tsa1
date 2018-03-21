@@ -4,6 +4,9 @@ setup(
   version = '0.2.1',
   packages = find_packages(exclude=["test*", "tests"]),
   install_requires=['tai5-uan5_gian5-gi2_kang1-ku7'],
+  package_data={
+        'moedict': ['moedict-twblg-kiat4-ko2',],
+    },
 
   author = '意傳',
   author_email = 'a8568730@gmail.com',
