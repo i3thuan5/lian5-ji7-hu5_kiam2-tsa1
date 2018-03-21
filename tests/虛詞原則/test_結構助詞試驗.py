@@ -30,15 +30,14 @@ class 單元試驗(TestCase):
         self.漢字 = '朋友的物件'
         self.臺羅 = 'pîng-iú-ê-mi̍h-kiānn'
         self.預期 = [('E虛詞（三）', 3, '前'), ('E虛詞（三）', 3, '後')]
-    
-    @skip('拆文分析器這馬閣有bug')
-    def test_老的_是詞綴_不是結構助詞(self):
+
+    def test_老的_輕聲調(self):
+        # 其實是詞綴，不是結構助詞
         self.漢字 = '老的'
         self.臺羅 = 'lāu--ê'
         self.預期 = []
-    
-    @skip('拆文分析器這馬閣有bug')
-    def test_的_前面時貌標誌且句子結尾(self):
+
+    def test_我看著的_輕聲調_時貌標誌後面或句子結尾(self):
         self.漢字 = '我看著的'
         self.臺羅 = 'Guá khuànn--tio̍h--ê'
         self.預期 = []
