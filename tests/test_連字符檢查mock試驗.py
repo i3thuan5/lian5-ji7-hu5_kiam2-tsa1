@@ -1,24 +1,13 @@
 from unittest.case import TestCase
-from src.連字符檢查.檢查 import 連字符檢查物件
 from unittest.mock import patch
+from src.連字符檢查.檢查 import 連字符檢查物件
 
-
-class 整合試驗(TestCase):
+class mock試驗(TestCase):
     def setUp(self):
         self.一物件 = 連字符檢查物件(
             '阿公會記得初一買我的物件',
             'A kong ē kì-tit tshe it bé guá-ê mi̍h-kiānn'
         )
-
-    def test檢查一句(self):
-        結果 = self.一物件.檢查()
-        self.assertEqual(結果, [
-            ('E名詞（一）', 2, '前', ),
-            ('E動詞（一）', 3, '後', ),
-            ('E名詞（二）', 7, '前', ),
-            ('E虛詞（三）', 10, '前'),
-        ])
-
     # 名詞原則
 
     @patch('src.連字符檢查.名詞原則.單音節詞綴.單音節詞綴原則')
