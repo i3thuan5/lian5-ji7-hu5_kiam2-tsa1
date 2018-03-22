@@ -1,5 +1,5 @@
 from unittest.case import TestCase
-from src.連字符檢查.教典.是教典詞組 import 是教典詞組
+from 連字符檢查.教典.是教典詞組 import 是教典詞組
 
 
 class 單元試驗(TestCase):

@@ -1,5 +1,5 @@
 from unittest.case import TestCase
-from src.連字符檢查.教典.讀取原始檔 import 讀取原始檔
+from 連字符檢查.教典.讀取原始檔 import 讀取原始檔
 
 
 class 單元試驗(TestCase):
