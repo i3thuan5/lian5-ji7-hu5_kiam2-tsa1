@@ -6,4 +6,6 @@
 *.pyc
 *.tar.gz
 *.egg-info
-/moedict-twblg.json
+
+# Auto-generated file
+*moedict-twblg.json
