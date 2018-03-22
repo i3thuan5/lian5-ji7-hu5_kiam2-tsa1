@@ -1,7 +1,7 @@
-from src.連字符檢查.名詞原則 import 單音節詞綴, 方位詞, 序列詞頭
+from 連字符檢查.名詞原則 import 單音節詞綴, 方位詞, 序列詞頭
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from src.連字符檢查.動詞原則 import 動詞
-from src.連字符檢查.虛詞原則 import 虛詞
+from 連字符檢查.動詞原則 import 動詞
+from 連字符檢查.虛詞原則 import 虛詞
 
 
 class 連字符檢查物件:
