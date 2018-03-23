@@ -1,6 +1,6 @@
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from unittest.case import TestCase, skip
-from src.連字符檢查.動詞原則.動詞 import 符合單音節補語原則
+from 連字符檢查.動詞原則.動詞 import 符合單音節補語原則
 
 
 class 單元試驗(TestCase):

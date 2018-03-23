@@ -1,6 +1,6 @@
 from unittest.case import TestCase
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from src.連字符檢查.名詞原則.序列詞頭 import 序列詞頭原則
+from 連字符檢查.名詞原則.序列詞頭 import 序列詞頭原則
 
 
 class 單元試驗(TestCase):

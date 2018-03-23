@@ -6,13 +6,12 @@ import json
 
 def 讀取原始檔():
     目前所在資料夾 = dirname(realpath(__file__))
-    專案資料夾 = dirname(dirname(dirname(目前所在資料夾)))
-    教典json檔名 = join(專案資料夾, 'moedict', 'moedict-twblg.json')
+    教典json檔名 = join(目前所在資料夾, 'moedict-twblg.json')
     if isfile(教典json檔名):
         with open(教典json檔名) as f:
             教典表 = set(json.load(f))
     else:
-        教典原始檔名 = join(專案資料夾, 'moedict', 'moedict-twblg-kiat4-ko2')
+        教典原始檔名 = join(目前所在資料夾, 'moedict-twblg-kiat4-ko2')
         教典表 = set()
         with open(教典原始檔名) as f:
             for line in f:

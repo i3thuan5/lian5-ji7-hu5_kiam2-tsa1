@@ -1,5 +1,5 @@
 from unittest.case import TestCase
-from src.連字符檢查.檢查 import 連字符檢查物件
+from 連字符檢查.檢查 import 連字符檢查物件
 
 
 class 整合試驗(TestCase):
