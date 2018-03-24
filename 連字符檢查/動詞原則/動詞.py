@@ -13,7 +13,8 @@ def 是環綴結尾(字分詞):
 
 
 def 是動詞(詞分詞):
-    集合 = ('徛｜khia7', '看｜khuann3', '講｜kong2', '排｜pai5', '整-理｜tsing2-li2')
+    集合 = ('徛｜khia7','聽｜thiann1', '看｜khuann3', '講｜kong2', '排｜pai5', 
+          '食｜tsiah8', '整-理｜tsing2-li2')
     return 詞分詞 in 集合
 
 
