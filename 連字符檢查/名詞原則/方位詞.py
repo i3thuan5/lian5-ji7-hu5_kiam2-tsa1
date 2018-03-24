@@ -3,12 +3,12 @@ from 臺灣言語工具.基本物件.詞 import 詞
 
 
 def 是名詞(詞分詞):
-    集合 = ('山｜suann1',)
+    集合 = ('山｜suann1', '桌｜toh4', '門｜mng5')
     return 詞分詞 in 集合
 
 
 def 是方位詞(詞分詞):
-    集合 = ('後-壁｜au7-piah4', '上｜siong7', '頂｜ting2', '下｜e7', '外｜gua7')
+    集合 = ('後-壁｜au7-piah4', '上｜siong7', '頂｜ting2', '下｜e7', '外｜gua7', '跤｜kha1')
     return 詞分詞 in 集合
 
 
